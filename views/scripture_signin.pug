@@ -1,0 +1,16 @@
+extends templates/layout
+
+append content
+    div(class="main_content_holder")
+        if has_verse
+            include templates/scripture_memorisation
+        else
+            
+        include templates/scripture_selection
+
+append scripts
+    script(src="http://code.jquery.com/jquery-3.1.0.min.js")
+    script(type="text/javascript").
+        let verse_reference = "!{verse_reference}";
+    script(src = "/javascripts/diff.js")
+    script(src = "/javascripts/scripture_response.js")

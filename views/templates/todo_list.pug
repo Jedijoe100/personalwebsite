@@ -1,0 +1,11 @@
+form(id="todo_list")
+    div(id="todo_list_storage")
+        for item in todo
+            input(type="checkbox", class="todo_items", id="todo-" + item.information.toLowerCase().split(" ").join("_"), value="todo-" + item.information.toLowerCase().split(" ").join("_"))
+            label(for="todo-" + item.information.toLowerCase().split(" ").join("_")) !{item.information}
+            br
+    input(type="submit", value="Submit")
+form(id="add_to_do_item")
+    input(type="textbox", id="add_new_todo_item")
+    br
+    input(type="submit", value="Submit")

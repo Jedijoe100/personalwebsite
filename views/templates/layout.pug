@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        title=data.title
+        link(rel='shortcut icon', type="image/png" href='/images/Crest.png')
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        script(src="http://code.jquery.com/jquery-3.1.0.min.js")
+        block scripts
+        div(id="header")
+            div(class="row")
+                div(class="col")
+                    h1= data.title
+                div(class="col")
+                    a(href="/settings" class="invis") Settings
+                div(class="col" id="signin_box")
+                    a(href="/login" class="invis") Sign In
+            div(class="row")
+                div(class="col link_boxes" )
+                    a(href="/memes" class="invis") Memes
+                div(class="col link_boxes" )
+                    a(href="/news" class="invis") News
+                div(class="col link_boxes")
+                    a(href="/scripture" class="invis") Scripture Memorizer
+                div(class="col link_boxes")
+                    a(href="/grade_calculator" class="invis") Grade Calculator
+                div(class="col link_boxes")
+                    a(href="/todo" class="invis") To Do
+                div(class="col link_boxes")
+                    a(href="/calendar" class="invis") Calendar
+                div(class="col link_boxes")
+                    a(href="/groups" class="invis") Groups
+            h2= data.group_name
+        br
+        br
+
+        block content
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

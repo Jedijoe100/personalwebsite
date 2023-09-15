@@ -1,0 +1,20 @@
+
+div(id='verse_selection' class='list-group')
+    form(method="post", id="UpdateVerses")
+        each book in verses.books
+            div(class="list-group-item" )
+                a(data-bs-toggle="collapse" role="button" href="#" + "_" + book.name.replace(" ", "_")+"_chapters") !{book.name}
+                br
+                div(id = "_" +book.name.replace(" ", "_")+"_chapters" class="collapse")
+                    each chapter in book.chapters
+                        a(data-bs-toggle="collapse" role="button" href="#" + "_" +book.name.replace(" ", "_")+chapter.id+"_verses") !{book.name} !{chapter.id}
+                        br
+                        div(id = "_" + book.name.replace(" ", "_")+chapter.id+"_verses" class="collapse")
+                            -for(let i =1; i< chapter.num_verses+1; i++)
+                                    if user_information.filter(value_1 => {return (book.name.replace(" ", "_") + ";" + chapter.id + ";" + i === value_1.verse_ID && value_1.is_active)})[0]
+                                         input(type="checkbox", class="input_boxes", id="_" +book.name.replace(" ", "_") + ";" + chapter.id + ";" + i, name=book.name.replace(" ", "_") + ";" + chapter.id + ";" + i, value=book.name.replace(" ", "_") + ";" + chapter.id + ";" + i, checked)
+                                    else
+                                         input(type="checkbox", class="input_boxes", id="_" +book.name.replace(" ", "_") + ";" + chapter.id + ";" + i, name=book.name.replace(" ", "_") + ";" + chapter.id + ";" + i, value=book.name.replace(" ", "_") + ";" + chapter.id + ";" + i)
+                                    label(for=book.name.replace(" ", "_") + ";" + chapter.id + ";" + i) !{book.name + " " + chapter.id + ":" + i}
+                                    br
+        input(type="submit", value="Submit")

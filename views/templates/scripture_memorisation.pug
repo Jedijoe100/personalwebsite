@@ -1,0 +1,15 @@
+h2(id = 'reference') !{verse}
+form(method="post", id="TestAnswer")
+    label
+    h3 Hint:
+    p(id = 'hint') !{hint}
+    h3 Verse:
+    textarea(class="form_color scripture_input", type="textarea", value="", name="verse_guess", autocomplete="off", rows="10")
+    br
+    p(id = 'familiarity') Familiarity: !{familiarity}
+    br
+    input(class='form_color' type="submit", value="Submit")
+    br
+    h3 Previous Failed Attempt 
+    br
+    p(id = 'previous_wrong')

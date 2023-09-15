@@ -1,0 +1,23 @@
+div(class="row" id="task_information")
+    div(class="col")
+        h5 Add new task
+        form(id="add_task")
+            input(type="textbox", id="add_new_name")
+            br
+            input(type="submit", value="Submit")
+    for task in tasks
+        div(class="col" id="holder-" + task.task.toLowerCase().split(" ").join("_"))
+            h4 !{task.task}
+            h5(id="time-" + task.task.toLowerCase().split(" ").join("_")) !{Math.round(task.time_spent)} hours and !{Math.round(task.time_spent % 1 * 60)} minutes
+            hr
+            form(class="add_to_task" id="update_task-" + task.task.toLowerCase().split(" ").join("_"))
+                h5 Add time
+                input(type="number" min="0" name="hours" value="0")
+                p hours
+                br
+                input(type="number" max="59" min="0" name="minutes" value="0")
+                p minutes
+                br
+                input(type="submit", value="Submit")
+            form(class="delete_task" id="delete_task-" + task.task.toLowerCase().split(" ").join("_"))
+                input(type="submit", value="Delete")

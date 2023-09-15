@@ -1,0 +1,15 @@
+extends templates/layout
+
+append content
+    h2 !{user.username}
+    div
+        <!--eventually want to make this selectable from the different meme sources. Meme sources might be an admin only thing-->
+        h3 meme sources
+        for meme_source in meme_sources
+            h4 !{meme_source.extra}
+    div
+        <!--same as meme sources-->
+        h3 news sources
+        for news_source in news_sources
+            h4 !{news_source.extra}: !{news_source.src}
+

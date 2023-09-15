@@ -1,0 +1,11 @@
+extends templates/layout
+
+append content
+    div(class="row main_content_holder")
+        each meme in memes
+            div(class="col meme_container")
+                h4 !{meme.title}
+                img(src=meme.url, width="400px")
+                h5 User: !{meme.author}
+                h5 Source: r/!{meme.source}
+append scripts

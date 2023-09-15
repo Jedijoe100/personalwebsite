@@ -1,0 +1,170 @@
+doctype html
+html(lang='en')
+  head
+    link(rel='shortcut icon', type="image/png" href='/images/Crest.png')
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/portfolio_style.css')
+    meta(charset='UTF-8')
+    title Joe Kent's Portfolio
+    script(src='https://polyfill.io/v3/polyfill.min.js?features=es6')
+    script#MathJax-script(async='', src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js')
+  body
+    #header
+      h1 Joseph Kent
+      h2 Mathematician
+    #main
+      #about.row.topic
+        .col-sm-6
+          h2 About
+          p
+            | I am 21 years old and studying a Masters of Mathematical Science at the University of Canterbury (UC).
+            | My Thesis is in Abstract Algebra and is projected to be finished in September 2023 with the submission
+            | deadline in December 2023.
+            | I also currently work at Imagination Station as an After School Facilitator.
+            | I love mathematics and using computers to enable me to solve problems.
+            | I constantly seek to grow and improve, investing time in optimising my workflow and going the slightly
+            | harder way to gain a better understanding of what is actually going on.
+            | I am self-directed and spend most of my time at high school learning topics ahead of the class even to the
+            | point of learning subjects at a year level ahead.
+            | I enjoy playing music having learnt a number of instruments and have been in numerous music groups even
+            | being the leader and singing solos in one.
+            | I also volunteer at Grace Presbyterian Church and Navigators (Christian university club) with singing,
+            | setup, sound mixing and Bible study facilitating.
+        .col-sm-6
+      #mathematics.topic
+        .row
+          .col-sm-6
+            h2 Mathematics
+            p
+              | I have a BSc in Mathematics and Physics and am currently working on my Thesis for a Masters in
+              | Mathematical Sciences (MMathSci).
+              | My thesis is in abstract algebra, a branch of pure mathematics, which involves modifying a current
+              | algorithm in c.
+              | I have also done numerous computational papers and have solved many computational mathematics
+              | problems on Project Euler.
+              | Some of these computational papers include, optimisation, numerical analysis and methods in
+              | mathematical modeling.
+            h3 Project Euler
+            p
+              a(href='https://projecteuler.net') Project Euler
+              |  is a repository of computational mathematic problems.
+              | Each problem is designed so that a low-end computer could computer the problem in under a minute if one writes the code efficiently.
+              | I have solved 74 problems using python, although there were a couple of problems that I managed to solve using just theory.
+            br
+            img(src='https://projecteuler.net/profile/Jedijoe.png', alt='Image of my Project Euler account information')
+          .col-sm-6
+            h3 Thesis - Computing Random Units in Number rings
+            p
+              | A number ring is an algebraic structure.
+              | It consists of a set of numbers, two operators, addition and multiplication and has a number of axioms.
+              | For example, the integers \(\mathbb{Z}\) form a ring with addition and multiplication.
+              | A unit is an element in a number ring with a multiplicative inverse, i.e. there is are two elements \(a\)
+              | and \(a^{-1}\) in our number ring such that \(aa^{-1}=1\).
+              | For example, in the integers, the only units are \(\pm 1\) as \(2\) has the inverse \(1/2\) which is not an
+              | integer.
+              | Another example is the rational numbers \(\mathbb{Q}\), in the rational numbers every element is a unit
+              | (every element is of the form \(a/b\) and that has the inverse \(b/a\)).
+              | We can extend a number ring to include more elements by adding roots of irreducible polynomials over the
+              | ring (where irreducible means the polynomial cannot be split into smaller polynomials).
+              | For example, the polynomial \(f(x)=x^{2}+1\) is irreducible over the real numbers \(\mathbb{R}\) (the roots
+              | of the polynomial are \(\pm i\notin \mathbb{R}\)) so we can build the extension \(\mathbb{C} =
+              | \mathbb{R}/\langle{f(x)}\rangle = \mathbb{R}(i)\) which is a ring containing the roots of \(f(x)\) and
+              | \(\mathbb{R}\).
+              | From a number ring we can then construct the ring of integers which is a subring that contains all
+              | elements in our ring such that they have integer coefficients.
+            br
+            p
+              | Thus, the aim for the project is to compute random units in the ring of integers for arbitrary fields.
+              | For a ring of integers we know how many units are required to generate the entire set of units.
+              | There is an algorithm that computes this entire set.
+              | This project aims to modify that algorithm to only find one or two units.
+              | The application of this project is to improve the performance in finding Brauer Manin obstructions on
+              | curves, basically informing whether there are rational solutions to an equation.
+      #computer_projects.topic
+        h2 Computer Projects
+        .row
+          .col-sm-6
+            h3 TrailBlazer
+            p
+              | For one of my physics university papers, I was required to work on a project.
+              | The project that I ended up working on was Trailblazer.
+              | This is a website repository of astronomical images that contain satellite streaks in them.
+              | I worked on developing the gallery page to be able to display images from the database as well as
+              | developing a way to connect to another repository using an api.
+              | The project&apos;s GitHub repository can be found 
+              a(href='https://github.com/dirac-institute/trailblazer') here
+              | and a demonstration website can be found 
+              a(href='https://trailblazer.dirac.dev/') here
+            br
+            img.com_img(src='/images/trailblazer.png', alt='Image of gallery page of Trailblazer')
+          .col-sm-6
+            h3 This website
+            p
+              | This website is self-hosted and uses javascript for the backend.
+              | To access the main part go to the 
+              a(href='kentfamily.nz/login') signin page
+              | (to access the website you will need to contain me at joe@kentfamily.nz).
+              | The main use for this website is for my own personal use.
+              | This website has a scripture memorisation program behind a signin system.
+              | It also has a function that uses api requests to get memes from reddit.
+            br
+            p
+              | On the technical side, this website uses mySQL to store users, hashed passwords, preferences and data
+              | for the scripture memorisation program.
+              | The backend is written in Javascript using  
+              code node.js
+              | with 
+              code express.js
+              | . The front end uses bootstrap, HTML and CSS.
+        .row
+          .col-sm-6
+            h3 Procedurally generated biome maps
+            p
+              | One project that I worked on in high school was a program that aimed for realism and was written in
+              | Javascript.
+              | The map was built from square tiles with the biome depending on three parameters, humidity, temperature
+              | and altitude.
+              | The humidity depended on the latitude and the see level of the planet.
+              | The Temperature depended on the latitude and the altitude.
+              | Both of these were varied using perlin noise.
+              | Finally, the Altitude was generated using perlin noise.
+              | More recently I have developed a python version that allows for easier modification of the biomes using
+              | a csv file for the types of biomes and using matrices for the calculations.
+            img.com_img(src='/images/python_biomes.png', alt='Image of the Python biome map')
+          .col-sm-6
+            h3 Physics Simulation
+            p
+              | Early at university I became interested in simulating formation of stellar systems only using
+              | gravitational interactions.
+              | I would start with about 1000 objects with one object in the center with larger mass than all the other
+              | objects.
+              | They would all have an initial velocity (as otherwise they would all collapse into a single object).
+              | Then all I would do is simulate each frame checking for collisions and computing movement with the only force being gravity.
+            img.com_img(src='/images/gravity_simulation.png', alt='Image of gravity simulation')
+      #music.topic
+        h2 Music
+        .row
+          .col-sm-6
+            | Over the Years I have also enjoyed playing instruments and composing.
+            | These include learning the violin and how to sing well.
+            | Currently, I am teaching myself piano and accordian.
+            | As well as learning these instruments, I have performed in numerous music groups that can be seen in the
+            | list bellow.
+          .col-sm-6
+            h3 Music Groups
+            ul
+              li Rostered on for singing Grace Presbyterian Church Worship band (2022-2023)
+              li Member of University of Canterbury Chamber Choir (2020-2021)
+              li Member of Bethlehem College Senior Auditioned Choir (2016-2019)
+              li Captain in Bethlehem College Senior Auditioned Choir (2019)
+              li Soloist in Bethlehem College Senior Auditioned Choir (2018-2019)
+              li Violinist in Bethlehem College Orchestra (2017-2019)
+              li Percussionist in Bethlehem College Concert Band (2019)
+    .footer
+      h4 Contact Details
+        p Email: joe@kentfamily.nz
+    //
+      Music Section
+      Projects
+      Maths
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM', crossorigin='anonymous')

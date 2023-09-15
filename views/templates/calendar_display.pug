@@ -1,0 +1,21 @@
+include calendar_row
+
+h3 !{calendar.monthName} !{calendar.year}
+button(onclick="previous_month()") Previous month
+button(onclick="next_month()") Next month
+table(class="calendar")
+    tr
+        th Sunday
+        th Monday
+        th Tuesday
+        th Wednesday
+        th Thursday
+        th Friday
+        th Saturday
+    +calendarRow(0)
+    +calendarRow(1)
+    +calendarRow(2)
+    +calendarRow(3)
+    +calendarRow(4)
+    if calendar.days.length > 35
+        +calendarRow(5)

@@ -1,0 +1,16 @@
+extends index
+
+append content
+    div(class='main_content_holder')
+        h1(id = 'title') Sign In
+        form(method="post", id="SignIn")
+            label
+            h3 Username
+            input(class='form_color' type="text", width="200px", name="username", value="")
+            h3 Verse:
+            input(class='form_color' type="password", width="200px", name="password", value="")
+            br
+            input(class='form_color' type="submit", value="Submit")
+append scripts
+    script(src="http://code.jquery.com/jquery-3.1.0.min.js")
+    script(type="text/javascript")

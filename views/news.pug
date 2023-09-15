@@ -1,0 +1,17 @@
+extends templates/layout
+
+append content
+    div(class="main_content_holder")
+        for news in category
+            h1 !{news.q}
+            br
+            div(class="row")
+                each article in news.response
+                    div(class="col news_container")
+                        h4 !{article.title}
+                        if article.urlToImage
+                            img(src=article.urlToImage, width="400px")
+                        h5 Author: !{article.author}
+                        a(href=article.url) Source: !{article.source.name}
+            br
+append scripts

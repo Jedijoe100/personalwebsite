@@ -1,0 +1,19 @@
+extends index
+
+append content
+    form(id="CalculationForm")
+        //put in here text boxes and a button to add more
+        div(id="textboxes")
+            input(type="number" step="0.01" max="1" name="worth" value="0")
+            input(type="number" step="0.01" max="1" name="value" value="0")
+            br
+        input(type="button", id="add_row", value="Add row")
+        input(type="submit", value="Submit")
+    p Amount Done:
+    p(id="amount_done")
+    br
+    p Current Grade
+    p(id="current_grade")
+    br
+append scripts
+    script(src = "/javascripts/grade_calculator.js")

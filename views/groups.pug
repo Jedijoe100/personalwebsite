@@ -1,0 +1,8 @@
+extends templates/layout
+
+append content
+    for group in groups
+        h3 !{group.group_name}
+        a(href="/groups/todo?id="+group.group_ID) Todo
+        a(href="/groups/calendar?id="+group.group_ID) Calendar
+

@@ -1,0 +1,85 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #70943E;
+}
+
+a {
+    color: #503e17;
+}
+
+.link_boxes {
+    width: 200px;
+}
+
+.invis {
+    color: inherit;
+    text-decoration: none;
+}
+
+.scripture_input{
+    width: 100%;
+    height: 100px;
+}
+
+.form_color{
+    background-color: #CDE29E;
+} 
+
+.invis:hover {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.news_container, .meme_container{
+    min-width: 400px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+.main_content_holder{
+    background-color: #9BC53D;
+    padding: 20px;
+    margin-top: -20px;
+    color: #3F4B3B;
+}
+
+#header {
+    background-color: #44633F;
+    padding: 20px 50px;
+    margin: -50px -50px -10px;
+    color: #D1D8CF;
+
+}
+.list-group-item {
+    background-color: #CDE29E;
+}
+
+#signin_box {
+    text-align: right;
+    margin: 10px;
+}
+
+.calendar th, .calendar td{
+    vertical-align:top;
+    width: 13%;
+    border: black solid 1px;
+}
+
+.calendar td{
+    height: 10rem;
+}
+
+.calendar {
+    width: 100%;
+}
+.color-grey {
+    color: grey;
+}
+.color-green {
+    color: green;
+}
+.color-red {
+    color: red;
+}

@@ -1,0 +1,12 @@
+mixin calendarRow(row_number)
+    tr
+        each day in calendar.days
+            if day.row === row_number
+                td !{day.day}
+                    if day.events
+                        each value in day.events
+                            br
+                            if value.time
+                                p !{value.name + " " + value.time}
+                            else
+                                p !{value.name}

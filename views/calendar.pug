@@ -1,0 +1,23 @@
+extends templates/layout
+
+append content
+    div(class='main_content_holder')
+        div(class='calendar_holder')
+            include templates/calendar_display
+        h5 Add new event
+        form(id="add_event")
+            input(type="textbox", id="event_name")
+            br
+            input(type="date", id='event_date')
+            br
+            input(type="time", id='event_time')
+            br
+            input(type="submit", value="Submit")
+
+append scripts
+    script(src="http://code.jquery.com/jquery-3.1.0.min.js")
+    script(type="text/javascript").
+        let month = !{calendar.month};
+        let year = !{calendar.year};
+        let query_value = "!{query_value}";
+    script(src = "/javascripts/calendar.js")

@@ -1,0 +1,13 @@
+extends index
+
+append content
+    include templates/tasks
+    hr
+    br
+    h2 To Do list
+    include templates/todo_list
+
+append scripts
+    script(type="text/javascript").
+        let query_value = "!{query_value}";
+    script(src = "/javascripts/todo.js")
